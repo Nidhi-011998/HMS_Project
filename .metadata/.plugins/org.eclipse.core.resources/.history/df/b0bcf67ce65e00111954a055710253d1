@@ -1,0 +1,24 @@
+package com.hms.testscript;
+
+import org.testng.Reporter;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.hms.generic.BaseClass;
+import com.hms.pom.DoctorsModule_CreatePatientPage;
+import com.hms.pom.DoctorsPage;
+
+@Listeners(com.hms.generic.ListnersImplementation.class)
+public class Doctors_Module_CreatePatient extends BaseClass{
+    @Test
+	public void Create_Patient() throws InterruptedException {
+    	DoctorsPage dp = new DoctorsPage(driver);
+    	dp.getPatientTab().click();
+    	
+    	DoctorsModule_CreatePatientPage addPatient =new DoctorsModule_CreatePatientPage(driver);
+    	addPatient.getAddPatientBtn().click();
+    	
+    	Thread.sleep(4000);
+		Reporter.log("Created Patient Successfully",true);
+	}
+}

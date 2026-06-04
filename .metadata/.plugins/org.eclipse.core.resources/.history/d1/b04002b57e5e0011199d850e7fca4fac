@@ -1,0 +1,46 @@
+package com.hms.pom;
+
+public class DoctorsModule_CreatePatientPage {
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement patientTab;
+	
+	@FindBy(xpath = "//button[contains(text(),'Add Patient')]")
+	private WebElement addPatientBtn;
+	
+	@FindBy(xpath = "//input[@name='patientName']")
+	private WebElement patientNameEdt;
+	
+	@FindBy(xpath = "//input[@name='email']")
+	private WebElement emailAddressEdt;
+	
+	@FindBy(xpath = "//input[@name='password' or @name='patientPassword']")
+	private WebElement patientPasswordEdt;
+	
+	@FindBy(xpath = "//input[@name='address']")
+	private WebElement addressEdt;
+	
+	@FindBy(xpath = "//input[@name='phone']")
+	private WebElement phoneNumberEdt;
+	
+	@FindBy(xpath = "//select[@name='gender' or @name='sex']")
+	private WebElement genderDropdown;
+	
+	@FindBy(xpath = "//input[@name='dob' or @name='birthDate']")
+	private WebElement birthDateEdt;
+	
+	@FindBy(xpath = "//input[@name='age']")
+	private WebElement ageEdt;
+	
+	@FindBy(xpath = "//button[contains(text(),'Submit')]")
+	private WebElement submitBtn;
+	
+	@FindBy(xpath = "//div[contains(text(),'successfully') or contains(@class,'success')]")
+	private WebElement successMsg;
+	
+	@FindBy(xpath = "//a[contains(text(),'Logout') or contains(text(),'Log out')]")
+	private WebElement logoutBtn;
+	
+	public DoctorCreatePatientPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+}

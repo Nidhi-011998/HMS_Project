@@ -1,0 +1,64 @@
+package com.hms.generic;
+
+import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+
+import com.hms.pom.DoctorsDashboardPage;
+import com.hms.pom.LoginPage;
+
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class BaseClass {
+	public static WebDriver driver ;
+	FileLib f = new FileLib();
+	@BeforeTest
+	public void openBrowser() throws IOException {
+//		 ChromeOptions options = new ChromeOptions();
+//		    // Disable notifications & popups
+//		    options.addArguments("--disable-notifications");
+//		    options.addArguments("--disable-infobars");
+//		    options.addArguments("--disable-extensions");
+//
+//		    // Open fresh session (avoids saved password issues)
+//		    options.addArguments("--incognito");
+//
+//		    // Optional: disable password save UI
+//		    options.addArguments("--disable-save-password-bubble");
+		    
+		Reporter.log("Opening Browser", true);
+	    driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		String url =f.getPropertyData("url");
+        driver.get(url);
+	}
+	@AfterTest
+	public void closeBrowser() {
+		driver.close();
+		Reporter.log("Closeing Browser", true);
+	}
+	@BeforeMethod
+	public void login() throws IOException {
+		String username =f.getPropertyData("doctor_username");
+		String pwd = f.getPropertyData("password");
+		LoginPage l = new LoginPage(driver);
+		l.getEmailidTxtField().sendKeys(username);
+		l.getPasswordTxtField().sendKeys(pwd);
+		l.getLoginBtn().click();
+		Reporter.log("Login To the Application", true);
+	}
+	@AfterMethod
+	public void logout() {
+		DoctorsDashboardPage d = new DoctorsDashboardPage(driver);
+		d.setLogOutBtn();
+		Reporter.log("Logged out of the Application", true);
+	}
+}

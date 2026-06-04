@@ -1,0 +1,48 @@
+package com.hms.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PatientPage {
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement DashboardTab;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement AppointmentTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement AppointmentListTab;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement PendingAppointmentsTab;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement PrescriptionTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement DoctorTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement BloodBankTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement AdmitHistoryTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement OperationTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement InvoiceTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement ProfileTab;
+	
+	 public PatientPage(WebDriver driver) {
+	    	PageFactory.initElements(driver, this);
+	    }
+}

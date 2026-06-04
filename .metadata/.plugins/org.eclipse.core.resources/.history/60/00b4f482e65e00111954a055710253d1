@@ -1,0 +1,35 @@
+package com.hms.testscript;
+
+import org.testng.Reporter;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.hms.generic.BaseClass;
+import com.hms.generic.FileLib;
+import com.hms.pom.DoctorsModule_CreatePatientPage;
+import com.hms.pom.DoctorsPage;
+
+@Listeners(com.hms.generic.ListnersImplementation.class)
+public class Doctors_Module_CreatePatient extends BaseClass{
+    @Test
+	public void Create_Patient() throws InterruptedException {
+    	FileLib f = new FileLib();
+    	String patientName = f.getExcelData("GuestDetails", 1, 0);
+		String patientEmail = f.getExcelData("GuestDetails", 1, 1);
+		String patientPassword = f.getExcelData("GuestDetails", 1, 2);
+		String patientAddress = f.getExcelData("GuestDetails", 1, 3);
+		String patientPhoneNumber = f.getExcelData("GuestDetails", 1, 4);
+		String patientGender = f.getExcelData("GuestDetails", 1, 0);
+		String patientBirthDate = f.getExcelData("GuestDetails", 1, 1);
+		String patientAge = f.getExcelData("GuestDetails", 1, 2);
+		
+    	DoctorsPage dp = new DoctorsPage(driver);
+    	dp.getPatientTab().click();
+    	
+    	DoctorsModule_CreatePatientPage addPatient =new DoctorsModule_CreatePatientPage(driver);
+    	addPatient.getAddPatientBtn().click();
+    	Thread.sleep(4000);
+    	addPatient.getPatientNameTxtField().sendKeys();
+		Reporter.log("Created Patient Successfully",true);
+	}
+}

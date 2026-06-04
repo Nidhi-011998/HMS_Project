@@ -1,0 +1,34 @@
+package com.hms.pom;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class PatientAppointmentPage {
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement DashboardTab;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement AppointmentTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement AppointmentListTab;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement PendingAppointmentsTab;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement PrescriptionTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement DoctorTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement BloodBankTab;
+	
+	@FindBy(xpath = "//a[contains(text(),'Patient')]")
+	private WebElement AdmitHistoryTab;
+	
+}

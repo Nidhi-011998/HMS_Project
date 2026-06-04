@@ -1,0 +1,11 @@
+package com.hms.testscript;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class Doctors_Module {
+    @Test
+	public void Create_Patient() {
+		Reporter.log("Created Patient");
+	}
+}

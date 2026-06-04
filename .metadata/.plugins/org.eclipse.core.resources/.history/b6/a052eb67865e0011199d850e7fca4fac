@@ -1,0 +1,23 @@
+package com.hms.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PatientApplyAppointmentPage {
+	@FindBy(xpath ="//input[contains(@placeholder,'date here')]")
+	private WebElement SelectDateField;
+	
+	@FindBy(xpath ="//input[@name='time_timestamp']")
+	private WebElement EnterTimeField;
+	
+
+	@FindBy(xpath = "//button[contains(text(),'Apply For Appointment')]")
+	private WebElement ApplyAppointmentButton;
+	
+	
+	public PatientApplyAppointmentPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+}

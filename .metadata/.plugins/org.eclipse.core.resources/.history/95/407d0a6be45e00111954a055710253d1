@@ -1,0 +1,45 @@
+package com.hms.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class DoctorsModule_CreatePatientPage {
+	@FindBy(xpath = "//button[contains(text(),'Add Patient')]")
+	private WebElement addPatientBtn;
+	
+	//ADD Patient Modal
+	@FindBy(name = "name")
+	private WebElement patientNameTxtField;
+	
+	@FindBy(name = "email")
+	private WebElement emailTxtField;
+	
+	@FindBy(name = "password")
+	private WebElement patientPasswordTxtField;
+	
+	@FindBy(name="address")
+	private WebElement patientAddressTxtField;
+	
+	@FindBy(name="phone")
+	private WebElement patientPhoneNumberTxtField;
+	
+	@FindBy(xpath = "//select[@name='gender' or @name='sex']")
+	private WebElement patientGenderDropdown;
+	
+	@FindBy(xpath = "//input[@name='dob' or @name='birthDate']")
+	private WebElement patientBirthDateEdt;
+	
+	@FindBy(xpath = "//input[@name='age']")
+	private WebElement patientAgeEdt;
+	
+	@FindBy(xpath = "//button[contains(text(),'Submit')]")
+	private WebElement patientSubmitBtn;
+	
+	public DoctorsModule_CreatePatientPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+}

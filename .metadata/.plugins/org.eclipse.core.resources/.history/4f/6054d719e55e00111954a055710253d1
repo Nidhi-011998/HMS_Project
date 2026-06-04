@@ -1,0 +1,15 @@
+package com.hms.testscript;
+
+import org.testng.Reporter;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.hms.generic.BaseClass;
+
+@Listeners(com.hms.generic.ListnersImplementation.class)
+public class Doctors_Module extends BaseClass{
+    @Test
+	public void Create_Patient() {
+		Reporter.log("Created Patient");
+	}
+}

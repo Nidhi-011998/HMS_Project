@@ -1,0 +1,60 @@
+package com.hms.pom;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class DoctorsModule_BedAllotmentPage {
+	@FindBy(xpath="//span[text()='Bed Allotment']")
+	private WebElement bedAllotmentTab;
+	
+	@FindBy(xpath="//button[@class='btn btn-primary pull-right']")
+	private WebElement addBABtn;
+	
+	@FindBy(xpath="(//div[@class='col-sm-5'])[1]")
+	private WebElement bedNumDropDown;
+	
+	@FindBy(xpath="(//div[@class='col-sm-5'])[2]")
+	private WebElement patientNameDropDown;
+	
+	@FindBy(xpath="(//input[@id='field-1'])[1]")
+	private WebElement allotmentTimeCalander;
+	
+	@FindBy(xpath="(//input[@id='field-1'])[2]")
+	private WebElement dischargeTimeCalander;
+	
+	@FindBy(xpath="//input[@type='submit']")
+	private WebElement AllotmentSubmitBtn;
+	
+	public BedAllotmentPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+	public WebElement getBedAllotmentTab() {
+		return bedAllotmentTab;
+	}
+
+	public WebElement getAddBABtn() {
+		return addBABtn;
+	}
+
+	public WebElement getBedNumDropDown() {
+		return bedNumDropDown;
+	}
+
+	public WebElement getPatientNameDropDown() {
+		return patientNameDropDown;
+	}
+
+	public WebElement getAllotmentTimeCalander() {
+		return allotmentTimeCalander;
+	}
+
+	public WebElement getDischargeTimeCalander() {
+		return dischargeTimeCalander;
+	}
+
+	public WebElement getAllotmentSubmitBtn() {
+		return AllotmentSubmitBtn;
+	}
+}

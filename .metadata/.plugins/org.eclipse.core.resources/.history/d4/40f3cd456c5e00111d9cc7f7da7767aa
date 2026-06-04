@@ -1,0 +1,21 @@
+package com.hms.generic;
+
+import org.testng.Reporter;
+
+public class BaseClass {
+   public void openBrowser() {
+	   Reporter.log("Opening Browser", true);
+   }
+   
+   public void closeBrowser() {
+	   Reporter.log("Closeing Browser", true);
+   }
+   
+   public void login() {
+	   Reporter.log("Login To the Application", true);
+   }
+   
+   public void logout() {
+	   Reporter.log("Logged out of the Application", true);
+   }
+}

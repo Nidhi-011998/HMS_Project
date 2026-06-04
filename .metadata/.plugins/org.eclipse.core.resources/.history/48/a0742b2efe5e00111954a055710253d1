@@ -1,0 +1,53 @@
+package com.hms.testscript;
+
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.hms.generic.BaseClass;
+import com.hms.generic.FileLib;
+import com.hms.pom.DoctorsModule_CreatePatientPage;
+
+@Listeners(com.hms.generic.ListnersImplementation.class)
+public class Doctors_Module_CreatePatient extends BaseClass{
+	@Test
+	public void Patient() {
+		Reporter.log("Created Patient Successfully",true);
+	}
+	
+//   @Test
+//	public void Create_Patient() throws InterruptedException  {
+//    	FileLib f = new FileLib();
+//    	String patientName = f.getExcelData("Patient_Credentials", 1, 1);
+//		String patientEmail = f.getExcelData("Patient_Credentials", 1, 2);
+//		String patientPassword = f.getExcelData("Patient_Credentials", 1, 3);
+//		String patientAddress = f.getExcelData("Patient_Credentials", 1, 4);
+//		String patientPhoneNumber = f.getExcelData("Patient_Credentials", 1, 5);
+//		String patientGender = f.getExcelData("Patient_Credentials", 1, 6);
+//		String patientBirthDate = f.getExcelData("Patient_Credentials", 1, 7);
+//		String patientAge = f.getExcelData("Patient_Credentials", 1, 8);
+//		
+//    	DoctorsPage dp = new DoctorsPage(driver);
+//    	dp.getPatientTab().click();
+//    	
+//    	DoctorsModule_CreatePatientPage addPatient =new DoctorsModule_CreatePatientPage(driver);
+//    	addPatient.getAddPatientBtn().click();
+//    	Thread.sleep(4000);
+//    	addPatient.getPatientNameTxtField().sendKeys(patientName);
+//    	addPatient.getPatientEmailTxtField().sendKeys(patientEmail);
+//    	addPatient.getPatientPasswordTxtField().sendKeys(patientPassword);
+//    	addPatient.getPatientAddressTxtField().sendKeys(patientAddress);
+    	//addPatient.getPatientPhoneNumberTxtField().sendKeys(patientPhoneNumber);
+//    	addPatient.getPatientGenderDropdown().click();
+//    	Select sel = new Select(getPatientGenderDropdown);
+//    	sel.selectByVisibleText("Male");
+    	//addPatient.getPatientBirthDateField().sendKeys(patientBirthDate);
+    	//addPatient.getPatientAgeTxtField().sendKeys(patientAge);
+//   	Thread.sleep(5000);
+//		Reporter.log("Created Patient Successfully",true);
+//	}
+}

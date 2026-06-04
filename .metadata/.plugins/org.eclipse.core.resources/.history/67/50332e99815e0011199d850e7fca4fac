@@ -1,0 +1,48 @@
+package com.hms.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PatientPage {
+	@FindBy(xpath = "//span[text()='Dashboard']")
+	private WebElement PatientDashboardTab;
+	
+	
+	@FindBy(xpath = "//span[text()='Appointment']")
+	private WebElement PatientAppointmentTab;
+	
+	@FindBy(xpath = "//span[text()='Appointment List']")
+	private WebElement PatientAppointmentListTab;
+	
+	
+	@FindBy(xpath = "//span[text()='Pending Appointments']")
+	private WebElement PatientPendingAppointmentsTab;
+	
+	
+	@FindBy(xpath = "//span[text()='Prescription']")
+	private WebElement PatientPrescriptionTab;
+	
+	@FindBy(xpath = "//span[text()='Doctor']")
+	private WebElement PatientDoctorTab;
+	
+	@FindBy(xpath = "//span[text()='Blood Bank']")
+	private WebElement PatientBloodBankTab;
+	
+	@FindBy(xpath = "//span[text()='Admit History']")
+	private WebElement PatientAdmitHistoryTab;
+	
+	@FindBy(xpath = "//span[text()='Operation History']")
+	private WebElement PatientOperationTab;
+	
+	@FindBy(xpath = "//span[text()='Invoice']")
+	private WebElement PatientInvoiceTab;
+	
+	@FindBy(xpath = "//span[text()='Dashboard']")
+	private WebElement PatientProfileTab;
+	
+	 public PatientPage(WebDriver driver) {
+	    	PageFactory.initElements(driver, this);
+	    }
+}

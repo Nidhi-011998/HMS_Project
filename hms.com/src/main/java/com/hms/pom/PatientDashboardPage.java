@@ -1,0 +1,92 @@
+package com.hms.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PatientDashboardPage {
+	@FindBy(xpath = "//span[text()='Dashboard']")
+	private WebElement PatientDashboardTab;
+	
+	
+	@FindBy(xpath = "//span[text()='Appointment']")
+	private WebElement PatientAppointmentTab;
+	
+	@FindBy(xpath = "//span[text()='Appointment List']")
+	private WebElement PatientAppointmentListTab;
+	
+	
+	@FindBy(xpath = "//span[text()='Pending Appointments']")
+	private WebElement PatientPendingAppointmentsTab;
+	
+	
+	@FindBy(xpath = "//span[text()='Prescription']")
+	private WebElement PatientPrescriptionTab;
+	
+	@FindBy(xpath = "//span[text()='Doctor']")
+	private WebElement PatientDoctorTab;
+	
+	@FindBy(xpath = "//span[text()='Blood Bank']")
+	private WebElement PatientBloodBankTab;
+	
+	@FindBy(xpath = "//span[text()='Admit History']")
+	private WebElement PatientAdmitHistoryTab;
+	
+	@FindBy(xpath = "//span[text()='Operation History']")
+	private WebElement PatientOperationTab;
+	
+	@FindBy(xpath = "//span[text()='Invoice']")
+	private WebElement PatientInvoiceTab;
+	
+	@FindBy(xpath = "//span[text()='Profile']")
+	private WebElement PatientProfileTab;
+	
+	 public PatientDashboardPage(WebDriver driver) {
+	    	PageFactory.initElements(driver, this);
+	    }
+
+	 public WebElement getPatientDashboardTab() {
+		 return PatientDashboardTab;
+	 }
+
+	 public WebElement getPatientAppointmentTab() {
+		 return PatientAppointmentTab;
+	 }
+
+	 public WebElement getPatientAppointmentListTab() {
+		 return PatientAppointmentListTab;
+	 }
+
+	 public WebElement getPatientPendingAppointmentsTab() {
+		 return PatientPendingAppointmentsTab;
+	 }
+
+	 public WebElement getPatientPrescriptionTab() {
+		 return PatientPrescriptionTab;
+	 }
+
+	 public WebElement getPatientDoctorTab() {
+		 return PatientDoctorTab;
+	 }
+
+	 public WebElement getPatientBloodBankTab() {
+		 return PatientBloodBankTab;
+	 }
+
+	 public WebElement getPatientAdmitHistoryTab() {
+		 return PatientAdmitHistoryTab;
+	 }
+
+	 public WebElement getPatientOperationTab() {
+		 return PatientOperationTab;
+	 }
+
+	 public WebElement getPatientInvoiceTab() {
+		 return PatientInvoiceTab;
+	 }
+
+	 public WebElement getPatientProfileTab() {
+		 return PatientProfileTab;
+	 }
+}

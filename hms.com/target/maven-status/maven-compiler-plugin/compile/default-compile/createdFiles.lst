@@ -1,0 +1,11 @@
+com\hms\generic\BaseClass.class
+com\hms\pom\Prescription.class
+com\hms\pom\DoctorsModule_CreatePatientPage.class
+com\hms\pom\PatientAppointmentPage.class
+com\hms\generic\FileLib.class
+com\hms\pom\PatientApplyAppointmentPage.class
+com\hms\pom\PatientDashboardPage.class
+com\hms\generic\ListnersImplementation.class
+com\hms\pom\DoctorsDashboardPage.class
+com\hms\pom\DoctorsModule_BedAllotmentPage.class
+com\hms\pom\LoginPage.class
